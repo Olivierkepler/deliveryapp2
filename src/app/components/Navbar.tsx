@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation"; // For client-side navigation
 import { FiMenu, FiX } from "react-icons/fi";
+// import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +24,17 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-blue-600 text-white shadow-lg">
+    <nav className="bg-gray-800 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div>
-            <Link href="/" className="text-2xl font-bold tracking-wide hover:underline">
-              DeliveryApp
-            </Link>
+            
+          <Link href="/" className="text-2xl text-white font-bold tracking-wide hover:underline">
+    <img src="/logoTransport.png" alt="Transport Logo" className="h-8 w-8" />
+  </Link>
+         
+
           </div>
 
           {/* Search Bar */}
@@ -52,19 +56,19 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <Link href="/" className="hover:underline">
+            <Link href="/" className="hover:underline text-white">
               Home
             </Link>
-            <Link href="/about" className="hover:underline">
+            <Link href="/about" className="hover:underline text-white">
               About
             </Link>
-            <Link href="/services" className="hover:underline">
+            <Link href="/services" className="hover:underline text-white">
               Services
             </Link>
-            <Link href="/contact" className="hover:underline">
+            <Link href="/contact" className="hover:underline text-white">
               Contact
             </Link>
-            <Link href="/login" className="hover:underline">
+            <Link href="/login" className="hover:underline text-white">
               Login
             </Link>
             <Link href="/signup" className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition">
